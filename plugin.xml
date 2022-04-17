@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+	<extension point="org.eclipse.ui.popupMenus">
+		<objectContribution objectClass="org.eclipse.core.resources.IFile"
+			id="JNLEclipsePlugin.contribution1" nameFilter="*.xml">
+			<menu label="JIL Tools" path="additions" id="JNLEclipsePlugin.menu1"
+				icon="icons/horse12.jpg">
+				<separator name="group1">
+				</separator>
+			</menu>
+			<action label="Raw XML To JIL" class="jnleclipseplugin.popup.actions.NewAction"
+				menubarPath="JNLEclipsePlugin.menu1/group1" enablesFor="1"
+				icon="icons/jnlicon.jpg" id="RAWXMLTOJIL" tooltip="Convert raw xml to jil">
+			</action>
+			<action label="Raw XML To Massaged XML" class="jnleclipseplugin.popup.actions.NewAction"
+				menubarPath="JNLEclipsePlugin.menu1/group1" enablesFor="1"
+				icon="icons/jnlicon.jpg" id="XMLTOMXML">
+			</action>
+			<action label="Massaged XML to JIL" class="jnleclipseplugin.popup.actions.NewAction"
+				menubarPath="JNLEclipsePlugin.menu1/group1" enablesFor="1"
+				icon="icons/jnlicon.jpg" id="MXMLTOJIL">
+			</action>
+			<action class="jnleclipseplugin.popup.actions.NewAction"
+				enablesFor="1" id="DBTOJIL" label="Database to JIL" icon="icons/jnlicon.jpg"
+				menubarPath="JNLEclipsePlugin.menu1/group1">
+			</action>
+		</objectContribution>
+		<viewerContribution
+			id="JNLEclipsePlugin.contribution1"
+			targetID="org.eclipse.core.runtime.xml.source.EditorContext">
+			<menu label="JIL Tools" path="additions" id="JNLEclipsePlugin.menu1">
+				<separator name="group2">
+				</separator>
+			</menu>
+			<action label="Raw XML To JIL" class="jnleclipseplugin.popup.actions.NewAction"
+				menubarPath="JNLEclipsePlugin.menu1/group2" 
+				icon="icons/jnlicon.jpg" id="RAWXMLTOJIL">
+			</action>
+			<action label="Raw XML To Massaged XML" class="jnleclipseplugin.popup.actions.NewAction"
+				menubarPath="JNLEclipsePlugin.menu1/group2" 
+				icon="icons/jnlicon.jpg" id="XMLTOMXML">
+			</action>
+			<action label="Massaged XML to JIL" class="jnleclipseplugin.popup.actions.NewAction"
+				menubarPath="JNLEclipsePlugin.menu1/group2" 
+				icon="icons/jnlicon.jpg" id="MXMLTOJIL">
+			</action>
+			<action class="jnleclipseplugin.popup.actions.NewAction"
+				id="DBTOJIL" label="Database to JIL" icon="icons/jnlicon.jpg"
+				menubarPath="JNLEclipsePlugin.menu1/group2">
+			</action>
+		</viewerContribution>
+	</extension>
+</plugin>
